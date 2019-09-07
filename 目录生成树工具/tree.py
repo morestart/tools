@@ -1,9 +1,12 @@
-from pathlib import Path
-
+try:
+    from pathlib import Path
+except ImportError:
+    print("use Python3 to run this program")
+    exit(1)
 
 tree_str = ''
 
-ignore_dir = [
+ignore_path = [
     ".pio",
     ".git",
     ".vscode",
@@ -15,11 +18,12 @@ ignore_file = [
     "gitignore",
     "yml",
     "travis",
+    "DS_Store",
 ]
 
 
 def is_ignore_path(path):
-    if path in ignore_dir:
+    if path in ignore_path:
         return True
     else:
         return False

@@ -1,8 +1,6 @@
-from time import sleep
 import shutil
 import os
 from psutil import disk_partitions
-import threading
 
 
 class MoveToUsb:

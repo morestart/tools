@@ -35,6 +35,7 @@ def on_connect(client, userdata, flags, rc):
         Logger.info("-----------------------")
         print("\n")
         client.subscribe("#")
+        # client.subscribe("equipment")
     else:
         Logger.error("连接失败  Return Code:" + str(rc))
         time.sleep(4)

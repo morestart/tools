@@ -13,7 +13,7 @@ def process_image(filename, mwidth=640, mheight=480):
         print(filename, 'is OK.')
         return
     if (1.0 * w / mwidth) > (1.0 * h / mheight):
-        scale = 1.0 * w / mwidth
+        scale = 1.0 * w / mwidt
         new_im = image.resize((int(w / scale), int(h / scale)), Image.ANTIALIAS)
 
     else:
